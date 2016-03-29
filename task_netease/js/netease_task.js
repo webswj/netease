@@ -282,9 +282,40 @@
   var tab1 = $("tab1");
   var tab2 = $('tab2');
   var pageBegin =0 ;  //用于Aajx取回数据后给当前页面对应页码节点赋值index
-  if(window.screen.width < 1205){ //根据屏幕大小更改pageSize的值
-    pageSize = 15 ;
-  }  
+//if( document.body.clientWidth < 1205){ //根据屏幕大小更改pageSize的值
+//  pageSize = 15 ;
+//}  
+////	window.onresize = function(){
+//		var winWidth = 0;
+//		if (window.innerWidth){
+//			winWidth = window.innerWidth;
+//		}else if ((document.body) && (document.body.clientWidth)){
+//			winWidth = document.body.clientWidth;
+//		}else if (document.documentElement && document.documentElement.clientWidth){
+//			winWidth = document.documentElement.clientWidth;
+//		}
+//		console.log(winWidth);
+//		if(winWidth < 1205){
+//			pageSize = 15 ;
+//		}
+//	}
+	addEvent(window,'resize',function(){
+		var winWidth = 0;
+		if (window.innerWidth){
+			winWidth = window.innerWidth;
+		}else if ((document.body) && (document.body.clientWidth)){
+			winWidth = document.body.clientWidth;
+		}else if (document.documentElement && document.documentElement.clientWidth){
+			winWidth = document.documentElement.clientWidth;
+		}
+		if(winWidth < 1205){
+			pageSize = 15 ;
+		}else{
+			pageSize = 20 ;
+		}
+		getCourse();
+	})
+
   addEvent(tab1,'click',function(event){//点击产品设计时执行
     if((tab1.className).indexOf("t-active") == -1){
       tab1.className += " t-active";

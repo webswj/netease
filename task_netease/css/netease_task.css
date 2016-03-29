@@ -393,11 +393,12 @@ width:20%;
 .m-lists {
 display:inline-block;
 position:relative;
-width:1228px;
 }
 
 .main-list {
 float:left;
+max-width: 995px;
+min-width: 727px;
 margin-right:233px;
 }
 
@@ -868,7 +869,7 @@ float:left;
 @media screen and max-width 1205px {
     .m-img,.m-pic,.g-footer .m-footer {
     min-width:960px;
-    width:1205px;
+    width:960px;
     }
 
     .m-header,.m-product,.m-lists,.m-tips {
