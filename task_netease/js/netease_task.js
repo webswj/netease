@@ -153,12 +153,17 @@
         }
       };
     }
+    xhr.onload = function(){
+      callback(xhr.responseText);
+    };
+    xhr.onerror = function(){
+      console.error('Request was unsuccessful: ' + xhr.status);
+    }
     if (!!options) {
       var url = url + '?' + serialize(options);
     };
     xhr.open("get",url,true);
-    xhr.send();
-
+    xhr.send(null);
       function serialize(data){
       if (!data) {
         return "";
@@ -650,7 +655,7 @@
         setCookie('loginSuc',0,new Date(3333,3));  
         disableSubmit(false);              
       }
-    });    
+    });
     return false;
   }
 /* 离开页面(刷新或者关闭浏览器)清空cookies 由于顶部通知栏关闭后刷新不显示，故而不清空 */
