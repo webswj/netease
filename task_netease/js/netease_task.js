@@ -43,6 +43,7 @@
     function $(id){
     return document.getElementById(id);
     }
+    
 /* getElementsByclassName兼容 */
   function getElementsByClassName(elm,clazz){
     if(elm.getElementsByClassName){
@@ -229,7 +230,7 @@
   var a_i = banner.getElementsByTagName('i');
   var q = 0 ; //用于储存图片的index
   var boo = true ; // 用于图片切换停止函数判断
-  /*轮播图动起来 5秒切换*/       
+/* 轮播图动起来 5秒切换  */       
   function activeC(){
     if(q == a_li.length-1){
        q = 0;
@@ -287,25 +288,14 @@
   var tab1 = $("tab1");
   var tab2 = $('tab2');
   var pageBegin =0 ;  //用于Aajx取回数据后给当前页面对应页码节点赋值index
-//if( document.body.clientWidth < 1205){ //根据屏幕大小更改pageSize的值
-//  pageSize = 15 ;
-//}  
-////	window.onresize = function(){
-//		var winWidth = 0;
-//		if (window.innerWidth){
-//			winWidth = window.innerWidth;
-//		}else if ((document.body) && (document.body.clientWidth)){
-//			winWidth = document.body.clientWidth;
-//		}else if (document.documentElement && document.documentElement.clientWidth){
-//			winWidth = document.documentElement.clientWidth;
-//		}
-//		console.log(winWidth);
-//		if(winWidth < 1205){
-//			pageSize = 15 ;
-//		}
-//	}
+ /* 根据窗口大小改变pageSize和HTML元素的宽度 */
 	addEvent(window,'resize',function(){
 		var winWidth = 0;
+		var Lists = getElementsByClassName(document,'m-lists')[0];
+		var product = getElementsByClassName(document,'m-product')[0];
+		var tips = getElementsByClassName(document,'m-tips')[0];
+		var headNav = getElementsByClassName(document,'m-header')[0];
+		var foot = getElementsByClassName(document,'m-footer')[0];
 		if (window.innerWidth){
 			winWidth = window.innerWidth;
 		}else if ((document.body) && (document.body.clientWidth)){
@@ -315,8 +305,18 @@
 		}
 		if(winWidth < 1205){
 			pageSize = 15 ;
+			Lists.setAttribute('style','width:960px;');
+			product.setAttribute('style','width:960px;');
+			tips.setAttribute('style','width:960px;');
+			headNav.setAttribute('style','width:960px;');
+			foot.setAttribute('style','width:960px;');
 		}else{
 			pageSize = 20 ;
+			Lists.removeAttribute('style');
+			product.removeAttribute('style');
+			tips.removeAttribute('style');
+			headNav.removeAttribute('style');
+			foot.removeAttribute('style');
 		}
 		getCourse();
 	})
@@ -379,6 +379,7 @@
         num.innerText = list[i].learnerCount;
         price.innerText =(list[i].price >0)?'￥'+(Number(list[i].price)).toFixed(2):'免费';
         kind.innerText = list[i].categoryName;
+        kind.innerText = (kind.innerText == "null")? " ":kind.innerText;
         description.innerText = list[i].description;
       }
       // console.log(data);
@@ -616,6 +617,7 @@
     var label = targetParent.getElementsByTagName('label');
     for(var i=0;i<label.length;i++){
       label[i].style.display = 'none';
+      label[i].setAttribute('style','display:none;')
     }
   })
 /* 验证密码  固定用户帐号：studyOnline ;固定用户密码：study.163.com ; */
