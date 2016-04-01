@@ -566,30 +566,30 @@ bottom:0;
 }
 
 .main-list .course-pager .cl-last {
-background:url(../img/left.png) no-repeat center center #9dd8b1;
+width:30px;
 height:20px;
 text-indent:-3999px;
-width:30px;
+background:url(../img/left.png) no-repeat center center #9dd8b1;
 }
 
 .main-list .course-pager a {
 display:inline-block;
+width:20px;
 height:20px;
 line-height:20px;
 text-decoration:none;
-width:20px;
 }
 
 .main-list .course-pager a:hover {
-background-color:#9dd8b1;
 color:#FFF;
+background-color:#9dd8b1;
 }
 
 .main-list .course-pager .cl-next {
-background:url(../img/right.png) no-repeat center center #9dd8b1;
+width:30px;
 height:20px;
 text-indent:-3999px;
-width:30px;
+background:url(../img/right.png) no-repeat center center #9dd8b1;
 }
 
 .main-list .course-pager .selected {
@@ -598,44 +598,44 @@ color:#10ae58;
 /* 侧边栏 */
 .side-list {
 float:right;
-margin-left:-225px;
 width:225px;
+margin-left:-225px;
 }
 
 .side-list h2 {
-border-bottom:1px solid #ddd;
-font-size:16px;
-font-weight:400;
 height:55px;
 line-height:55px;
 padding:0 20px;
+border-bottom:1px solid #ddd;
+font-size:16px;
+font-weight:400;
 text-align:left;
 }
 
 .side-list .u-tt {
-color:#666;
 padding:20px 23px 9px;
 text-align:left;
+color:#666;
 }
 
 .side-list .u-line {
-background:#fff;
-box-shadow:0 1px 1px 0 rgba(7,0,1,0.3);
-height:229px;
 width:223px;
+height:229px;
+background-color:#fff;
+box-shadow:0 1px 1px 0 rgba(7,0,1,0.3);
 }
 
 .side-list .h-item {
-overflow:hidden;
 padding:20px;
+overflow:hidden;
 text-overflow:ellipsis;
 white-space:nowrap;
 }
 
 .side-list .h-pic {
 float:left;
-height:50px;
 width:50px;
+height:50px;
 }
 
 .side-list .h-tt {
@@ -646,151 +646,153 @@ white-space:nowrap;
 }
 
 .side-list .h-num {
-background:url(../img/people.png) no-repeat 0 1px;
-color:#999;
 display:inline-block;
-font-size:12px;
 height:18px;
 line-height:18px;
 margin:10px 0 0 60px;
 padding-left:16px;
+font-size:12px;
+color:#999;
+background:url(../img/people.png) no-repeat 0 1px;
 }
 /* 视频弹窗 */
 .g-video {
-background:url(../img/background.png);
-bottom:0;
+
 display:table-cell;
-height:100%;
-left:0;
-overflow:hidden;
 position:fixed;
-right:0;
 top:0;
-vertical-align:middle;
+right:0;
+left:0;
+bottom:0;
 width:100%;
+height:100%;
+overflow:hidden;
+vertical-align:middle;
+background:url(../img/background.png);
 z-index:88;
 }
 
 .g-video .m-video {
--moz-box-sizing:border-box;
--webkit-box-sizing:border-box;
-background-color:#fff;
-box-sizing:border-box;
 display:inline-block;
-height:700px;
-left:50%;
-margin-left:-480px;
-margin-top:-350px;
 position:absolute;
 top:50%;
+left:50%;
 width:960px;
+height:700px;
+margin-left:-480px;
+margin-top:-350px;
+background-color:#fff;
+box-sizing:border-box;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
 }
 
 .g-video .m-video h2 {
-font-size:18px;
 padding:30px 0 0 30px;
+font-size:18px;
 text-align:left;
 }
 
 .g-video .m-video video {
-margin:40px 30px;
 width:900px;
+margin:40px 30px;
 }
 
 .g-video .u-close {
-background:url(../img/close1.png) no-repeat 0 48%;
-cursor:pointer;
 display:inline-block;
 float:right;
+width:10px;
 height:10px;
 margin:18px 12px;
-width:10px;
+background:url(../img/close1.png) no-repeat 0 48%;
+cursor:pointer;
 }
 /* 登陆弹窗 */
 .g-login {
-background:url(../img/background.png);
-bottom:0;
 display:table-cell;
-left:0;
 position:fixed;
-right:0;
 top:0;
+right:0;
+left:0;
+bottom:0;
 vertical-align:middle;
+background:url(../img/background.png);
 z-index:88;
 }
 
 .m-login {
--moz-box-sizing:border-box;
--webkit-box-sizing:border-box;
-background-color:#fff;
-box-sizing:border-box;
 display:inline-block;
-height:300px;
+position:absolute;
+top:50%;
 left:50%;
+width:400px;
+height:300px;
 margin-left:-200px;
 margin-top:-150px;
-position:absolute;
 text-align:left;
-top:50%;
-width:400px;
+background-color:#fff;
+box-sizing:border-box;
+-moz-box-sizing:border-box;
+-webkit-box-sizing:border-box;
 }
 
 .g-login .m-login h2 {
 display:inline-block;
+margin-top:30px;
+margin-left:40px;
+margin-bottom:20px;
 font-size:18px;
 font-weight:400;
-margin-bottom:20px;
-margin-left:40px;
-margin-top:30px;
 }
 
 .g-login .m-login fieldset {
-margin-left:50px;
 position:relative;
+margin-left:50px;
 }
 
 .g-login .m-login input {
-background-color:#fafafa;
-border:1px solid #dfdfdf;
+width:295px;
 height:45px;
 margin:0 auto 15px;
+border:1px solid #dfdfdf;
 vertical-align:middle;
-width:295px;
+background-color:#fafafa;
 }
 
 .g-login .m-login .m-lab1 label {
-color:#ccc;
-font-size:16px;
-left:3px;
 position:absolute;
 top:15px;
+left:3px;
+font-size:16px;
+color:#ccc;
 }
 
 .g-login .m-login .m-lab2 label {
-color:#ccc;
-font-size:16px;
-left:3px;
 position:absolute;
 top:75px;
+left:3px;
+font-size:16px;
+color:#ccc;
 }
 
 .g-login .m-login button {
-background:url(../img/btn.png) repeat-x center center;
-color:#fff;
-font-size:16px;
+width:300px;
 height:46px;
 margin:29px 0 ;
-width:300px;
+font-size:16px;
+color:#fff;
+background:url(../img/btn.png) repeat-x center center;
 }
 
 .g-login .m-login .u-close {
-background:url(../img/close1.png) no-repeat 0 48%;
-cursor:pointer;
+
 display:inline-block;
 float:right;
+width:12px;
 height:12px;
 margin:10px 8px;
-width:12px;
+background:url(../img/close1.png) no-repeat 0 48%;
+cursor:pointer;
 }
 
 .g-login .m-login .disabled {
@@ -799,8 +801,8 @@ cursor:default;
 }
 /* 底部 */
 .g-footer {
-height:260px;
 width:100%;
+height:260px;
 min-width: 960px;
 background:url(../img/background.png) repeat-x ;
 }
@@ -810,26 +812,26 @@ color:#abadb0;
 }
 
 .g-footer .u-logo span {
-color:#39a030;
 display:inline-block;
-font-size:22px;
 line-height:18px;
 padding-left:10px;
+font-size:22px;
+color:#39a030;
 }
 
 .g-footer .u-logo span:first-child {
-border-right:2px solid #39a030;
 padding:0 10px 0 0;
+border-right:2px solid #39a030;
 }
 
 .g-footer .m-footer {
-position: relative;
-color:#abadb0;
 display:inline-block;
+position: relative;
 width: 1213px;
-font:12px/22px 'Aeail','Microsoft YaHei';
 height:260px;
+font:12px/22px arial,'Microsoft YaHei';
 text-align:left;
+color:#abadb0;
 }
 
 .g-footer .m-left h2 {
@@ -844,15 +846,15 @@ line-height:26px;
 position: absolute;
 top: 0;
 left: 0;
-margin-top:90px;
 width:400px;
+margin-top:90px;
 }
 /* 底部右边部分 */
 .g-footer .m-right {
 position: absolute;
 right: 0;
 top: 0;
-font:14px/28px 'Aeail','Microsoft YaHei';
+font:14px/28px arial,'Microsoft YaHei';
 padding-top:90px;
 }
 
